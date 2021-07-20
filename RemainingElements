@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.Stack;
+public class RemainingElements
+{
+static Stack<Integer> stack=new Stack<Integer>();
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+insert(a,n);
+remove();
+}
+public static void insert(int a[],int n)
+{
+for(int i=0;i<n;i++)
+stack.push(a[i]);
+System.out.println(stack);
+}
+public static void remove(int a[],int n)
+{
+for(int i=0;i<n;i++)
+stack.remove(a[i]);
+System.out.println(stack);
+}
+}
